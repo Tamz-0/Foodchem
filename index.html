@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Stream - connect the donors</title>
+
+  <!-- favicon-->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--css-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+
+  <!-- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  .popup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background: linear-gradient(135deg, #ffffff, #a3d2ee);
+      color: #0e254e;
+      font-size: 16px;
+      z-index: 9999;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    </style>
+  <script>
+    // Function to display the popup message
+    function showPopup(message) {
+      const popup = document.createElement("div");
+      popup.className = "popup";
+      popup.textContent = message;
+      document.body.appendChild(popup);
+
+      // Automatically close the popup after 3 seconds
+      setTimeout(function () {
+        popup.remove();
+      }, 3000);
+    }
+  </script>
+</head>
+
+<body id="top">
+  <!-- HEADER-->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:foodforthought@gmail.com" class="contact-link">foodforthought@gmail.com</a>
+          </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+91987654321" class="contact-link">+987654321</a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/andro.pool.54?mibextid=ZbW" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_vladimir_pu___/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/A5340" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtu.be/Af0g\\k_kiGac" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom" data-header>
+      <div class="container">
+        <a href="#" class="logo">Red Stream</a>
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.php" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="#service" class="navbar-link" data-nav-link>CROPS</a>
+            </li>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+            <li>
+              <a href="contact.php" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="register.php" class="btn">Login / Register</a>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!--HERO-->
+      <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img src="assets/images/blood-icon.png" alt="ICON" width="350" height="350"> 
+            <p class="section-subtitle">Welcome To Food for thought</p>
+            <h1 class="h1 hero-title">Connecting The crops across the globe</h1>
+            <p class="hero-text">
+              "Food for thought" is your ultimate destination for all things agriculture. Our platform offers a comprehensive suite of tools and resources designed to empower farmers, agronomists, and agricultural enthusiasts alike. Whether you're looking for expert advice on crop cultivation techniques, the latest industry news and trends, or innovative solutions to boost your agricultural productivity, Crops Website has you covered. From crop selection guidance to pest management strategies and market analysis, our user-friendly interface provides easy access to valuable information tailored to your specific needs. Join our community today and embark on a journey towards sustainable farming practices and agricultural success. <form action="" class="hero-form" method="POST">
+              <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
+                class="email-field">
+              <button type="submit" class="btn">Get Response Back</button>
+            </form>
+          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+
+      <!--SERVICE-->
+<section class="section service" id="service" aria-label="service">
+  <div class="container">
+    <p class="section-subtitle text-center">crops</p>
+    <h2 class="h2 section-title text-center">FIND crops</h2>
+
+    <!-- Replace the existing content with your form -->
+    <form class="donor-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="blood-type">crops Type:</label>
+        <select id="blood-type" name="blood-type">
+          <option value="A+">Cereal Crops</option>
+          <option value="A-">Kharif</option>
+          <option value="B+"> Pulse</option>
+          <option value="B-">Oilseed</option>
+          <option value="AB+">Roots</option>
+          <option value="AB-">Fruit</option>
+          
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+      </div>
+
+      <button type="submit" class="btn">Find Crops</button>
+    </form>
+  </div>
+</section>
+
+
+
+      <!--ABOUT-->
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="470" height="538" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+          <div class="about-content">
+            <p class="section-subtitle">About Us</p>
+            <h2 class="h2 section-title">We Care For Your Loved Ones ꨄ︎</h2>
+            <p class="section-text section-text-1">
+              At Connecting the Crops, we're passionate about fostering a thriving community of growers, agricultural enthusiasts, and anyone with a green thumb. Our journey began with a simple yet profound vision: to create a platform where individuals from all walks of life could come together to share knowledge, experiences, and resources related to farming and gardening. Through our online hub, we aim to cultivate connections that transcend geographical boundaries, empowering individuals to learn, grow, and flourish in their agricultural endeavors.
+<BR>
+              <b>Our Commitment
+
+</b>
+   <p class="section-text">
+
+    Driven by a commitment to sustainability, innovation, and inclusivity, we strive to be a trusted source of inspiration and information for both novice and seasoned growers alike. With a focus on promoting eco-friendly practices, responsible stewardship of natural resources, and the adoption of cutting-edge technologies, we envision a future where agriculture is not only productive but also harmonious with the environment. Join us on this exciting journey as we sow the seeds of knowledge, nurture meaningful connections, and harvest a bountiful harvest of shared success.
+
+
+
+
+
+
+    <a href="about.html" class="btn">Read more About Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!--services-->
+
+      <section class="section doctor" aria-label="doctor">
+        <div class="container">
+          <p class="section-subtitle text-center">Emergency !</p>
+          <h2 class="h2 section-title text-center">Our other services</h2>
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-1.png" width="460" height="500" loading="lazy" alt="PREBOOK"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Pre Book Food</a>
+                </h3>
+                <p class="card-subtitle">Book Food For An upcoming Date</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-2.png" width="460" height="500" loading="lazy" alt="AMBULANCE"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Call Food Trucks</a>
+                </h3>
+                <p class="card-subtitle">Get our  service</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-3.png" width="460" height="500" loading="lazy" alt="WHY DONATE ?"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Why Donate ?</a>
+                </h3>
+                <p class="card-subtitle">Why donate food ?</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-4.png" width="460" height="500" loading="lazy" alt="CAN YOU DONATE"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="canyoudonate.html" class="card-title">Can You Donate ?</a>
+                </h3>
+                <p class="card-subtitle">Check that can you donate food</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!--CTA-->
+      <section class="section cta" aria-label="cta">
+        <div class="container">
+          <figure class="cta-banner">
+            <img src="./assets/images/cta-banner.png" width="1056" height="1076" loading="lazy" alt="cta banner"
+              class="w-100">
+          </figure>
+          <div class="cta-content">
+            <p class="section-subtitle">Give Food Directly To Us</p>
+            <h2 class="h2 section-title">We Are open And Welcoming Donors</h2>
+            <a href="#" class="btn">Book schedule</a>
+          </div>
+        </div>
+      </section>
+
+      <!--BLOG-->
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+          <p class="section-subtitle text-center">Our Blog</p>
+          <h2 class="h2 section-title text-center">Latest Blog & News</h2>
+          <ul class="blog-list">
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-1.jpg" width="1180" height="800" loading="lazy"
+                    alt="Cras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title"><b>Varieties of Fare Savored by Diverse Communities</b></a>
+                  </h3>
+                  <p class="card-text">
+                    
+
+                    In the rich tapestry of gastronomic delights, myriad communities partake in a cornucopia of culinary treasures. From the hearty stews of ye olde English countryside to the aromatic spices of the Orient, each corner of the globe boasts its own delectable repertoire. Whether indulging in the sumptuous curries of India, the delicate sushi of the Far East, or the savory pies of merry England, every bite tells a story of tradition and heritage. Our web enclave celebrates this mosaic of flavors, offering a glimpse into the culinary customs cherished by different peoples. Join us as we embark on a journey through taste, exploring the diverse cuisines that unite us in a shared appreciation for the finer pleasures of the table.   </p>
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-2.jpg" width="1180" height="800" loading="lazy"
+                    alt="Dras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#top" class="card-title"><b>Empowering Communities Through Food Trucks and Donation Drives</b></a>
+                  </h3>
+                  <p class="card-text">
+                    
+
+In a world where access to nutritious meals is not guaranteed for everyone, food trucks and donation drives play a pivotal role in bridging the gap. These mobile initiatives bring sustenance directly to underserved communities, offering not only nourishment but also hope and support. At our web platform, we celebrate the impactful work of food trucks and donation drives, highlighting their efforts to combat hunger and food insecurity. From grassroots initiatives to large-scale operations, these endeavors exemplify the power of community-driven action. Through our platform, we aim to amplify their voices, connect individuals with resources, and inspire others to join the movement. Together, we can build a more inclusive society where everyone has access to the food they need to thrive. Join us in supporting these vital initiatives and making a difference in the lives of others.     </p>
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                    alt="Seas accumsan nulla nec lacus ultricies placerat." class="img-cover">
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title"><b>Food Wastage: A Global Challenge</b>></a>
+                  </h3>
+                  <p class="card-text">
+                    
+
+Food wastage is a pressing issue with far-reaching consequences, affecting both the environment and society. Every year, millions of tons of food are discarded, contributing to greenhouse gas emissions, depleting natural resources, and perpetuating food insecurity. At our web platform, we aim to shed light on this critical issue and inspire positive change. Through informative content, practical tips, and community engagement, we strive to raise awareness about the impacts of food wastage and empower individuals to take action. Together, we can reduce waste, promote sustainable consumption habits, and build a future where every morsel counts. Join us in our mission to combat food wastage and create a more equitable and sustainable world for generations to come.                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">Red Stream</a>
+          <p class="footer-text">
+            *Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quo repellendus quisquam. Iusto, illum aut adipisci, beatae veritatis cum magnam perspiciatis quos voluptates ab eius est suscipit voluptatem nobis dolores.  </p>
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <span class="span">
+              24 X 7:<br>
+              365 Days
+            </span>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Find donor</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">About us</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Contact</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Login / Register</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <a href="https://goo.gl/maps/BYA5MxQUg5ZmmmmmmFLcA">
+            <address class="item-text">
+              Lovely Professional University,<br>
+              Phagwara, Punjab,IN
+            </address>
+          </a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+91987654321" class="footer-link">+91987654321</a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:h elp@example.com" class="footer-link">foodforthought@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 All Rights Reserved by Food for thought
+        </p>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/andro.pool.54?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_vladimir_putin.___/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Annabel07785340" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Validate the email address
+    if (isset($_POST["email_address"]) && filter_var($_POST["email_address"], FILTER_VALIDATE_EMAIL)) {
+        // Sanitize the email address to prevent SQL injection
+        $email = htmlspecialchars($_POST["email_address"]);
+        // Database connection details
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "redstream_db";
+        // Create a connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        // Prepare and execute the SQL query to insert the email into the database
+        $stmt = $conn->prepare("INSERT INTO response_back (email) VALUES (?)");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        // Check if the email is inserted successfully
+        if ($stmt->affected_rows > 0) {
+            // Email added successfully, show the popup message
+            echo '<script>showPopup("Email added successfully!");</script>';
+        } else {
+            // Unable to add email, show the popup message
+            echo '<script>showPopup("Error: Unable to add email. Please try again later.");</script>';
+        }
+        // Close the statement and connection
+        $stmt->close();
+        $conn->close();
+    } else {
+        // Invalid email address, show the popup message
+        echo '<script>showPopup("Error: Invalid email address. Please enter a valid email.");</script>';
+    }
+}
+?>
+
+  <!--BACK TO TOP-->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--custom js link-->
+  <script src="./assets/js/script.js" defer></script>
+  <!--ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
